@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint HWSCustomIOSLib.podspec.podspec' to ensure this is a
+#  Be sure to run `pod spec lint HWSCustomIOSLib.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -7,11 +7,11 @@
 #
 
 Pod::Spec.new do |s|
-  s.name         = "HWSCustomIOSLib.podspec"
-  s.summary      = "A Common Custom UI Controls, Common Custom Models of HWSCustomIOSLib.podspec."
+  s.name         = "HWSCustomIOSLib"
+  s.summary      = "A Common Custom UI Controls, Common Custom Models of HWSCustomIOSLib"
 
   s.description  = <<-DESC
-                   A longer description of HWSCustomIOSLib.podspec in Markdown format.
+                   A longer description of HWSCustomIOSLib in Markdown format.
 
                    * Think: Why did you write this? What is the focus? What does it do?
                    * CocoaPods will be using this to generate tags, and improve search results.
