@@ -1,0 +1,15 @@
+[submodule "Documents/MyApps/MyFirstSounCloudApp/OAuth2Client"]
+	path = Documents/MyApps/MyFirstSounCloudApp/OAuth2Client
+	url = git://github.com/nxtbgthng/OAuth2Client.git
+[submodule "Documents/MyApps/MyFirstSounCloudApp/CocoaSoundCloudAPI"]
+	path = Documents/MyApps/MyFirstSounCloudApp/CocoaSoundCloudAPI
+	url = git://github.com/soundcloud/CocoaSoundCloudAPI.git
+[submodule "Documents/MyApps/MyFirstSounCloudApp/JSONKit"]
+	path = Documents/MyApps/MyFirstSounCloudApp/JSONKit
+	url = git://github.com/nxtbgthng/JSONKit.git
+[submodule "Documents/MyApps/MyFirstSounCloudApp/OHAttributedLabel"]
+	path = Documents/MyApps/MyFirstSounCloudApp/OHAttributedLabel
+	url = git://github.com/nxtbgthng/OHAttributedLabel.git
+[submodule "Documents/MyApps/MyFirstSounCloudApp/CocoaSoundCloudUI"]
+	path = Documents/MyApps/MyFirstSounCloudApp/CocoaSoundCloudUI
+	url = git://github.com/soundcloud/CocoaSoundCloudUI.git
