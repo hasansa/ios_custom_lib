@@ -73,15 +73,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Appearance", "Appearance/**/*.{h,m}"
-  s.source_files  = "Combobox", "Combobox/**/*.{h,m}"
-  s.source_files  = "Common Objects", "Common Objects/**/*.{h,m}"
-  s.source_files  = "DetailsVC", "DetailsVC/**/*.{h,m}"
-  s.source_files  = "HUDProgress", "HUDProgress/**/*.{h,m}"
-  s.source_files  = "Models", "Models/**/*.{h,m}"
-  s.source_files  = "SearchBar", "SearchBar/**/*.{h,m}"
-  s.source_files  = "SideMenuVC", "SideMenuVC/**/*.{h,m}"
-
+  s.source_files  = "Classes", "Classes/**/*.{h,m}"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
