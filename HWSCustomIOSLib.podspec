@@ -73,8 +73,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = 'Classes/*.{h,m}'
-  s.source_files  = 'Classes'
-  s.source_files  = 'Classes/**/*.{h,m}'
+  s.source_files  = 'Classes', 'Classes/**/*.{h,m}'
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
