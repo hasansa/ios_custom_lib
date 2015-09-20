@@ -75,7 +75,7 @@ static NSString *const kFollowTheHighlightedPath                    = @"Follow t
 #pragma mark Macros
 ////////////////////////////////////////////////////////////////////////////////////////
 
-#define LOCALIZATION(text) [SPLocalization stringForKey:text]
+#define LOCALIZATION(text) [HWSLocalization stringForKey:text]
 
 #define kDetailsIconUrlByAppendName(name) [NSString stringWithFormat:@"%@res/%@/%@/homeicons/%@", BASE_URL, [[UserDefaults sharedDefaults] projectID], kCampusId, name]
 

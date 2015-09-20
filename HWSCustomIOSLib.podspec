@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "HWSCustomIOSLib"
-  s.version      = "5.0"
+  s.version      = "6.0"
   s.summary      = "A Common Custom UI Controls, Common Custom Models of HWSCustomIOSLib"
 
   s.description  = <<-DESC
@@ -61,7 +61,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/HasanSawaed/ios_custom_lib.git", :tag => "5.0" }
+  s.source       = { :git => "https://github.com/HasanSawaed/ios_custom_lib.git", :tag => "6.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -73,6 +73,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = 'Classes/*.{h,m}'
+  s.source_files  = 'Classes/**/*.{h,m}'
   s.source_files  = '**/*.{h,m}'
 
 
@@ -84,10 +85,9 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = "Resources/*.xib"
-  s.resources = "Resources/*.plist"
   s.resources = "Resources/*.json"
-
+  s.resource_bundles = "Resources/*.xib"
+  s.resource_bundles = "Resources/*.plist"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
