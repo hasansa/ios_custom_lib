@@ -82,7 +82,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resources = '**/*.json', '**/*.{xib}', '**/*.plist', 'Resources/*.{json}', 'Resources/*.{xib}', 'Resources/*.{plist}'
+  s.resources = 'Resources/*.{json}', 'Resources/*.{xib}', 'Resources/*.{plist}'
   # s.resource_bundles = '**/*.{xib}', '**/*.{plist}'
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
