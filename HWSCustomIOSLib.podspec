@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "HWSCustomIOSLib"
-  s.version      = "6.0"
+  s.version      = "7.0"
   s.summary      = "A Common Custom UI Controls, Common Custom Models of HWSCustomIOSLib"
 
   s.description  = <<-DESC
@@ -61,7 +61,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/HasanSawaed/ios_custom_lib.git", :tag => "6.0" }
+  s.source       = { :git => "https://github.com/HasanSawaed/ios_custom_lib.git", :tag => "7.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
