@@ -9,12 +9,13 @@
 #import "Global.h"
 #import "HWSLocalization.h"
 //
-#define kDisplayImage @"kViewControllerDisplayImage"
-#define kDisplaySelectedImage @"kViewControllerSelectedImage"
-#define kDisplayName @"kViewControllerDisplayName"
-#define kStoryboardIdentifier @"kViewControllerXib"
-#define kMenuViewControllersPlist @"MenuViewControllers"
-#define kMenuSideBarSet @"kSideBarSet"
+#define kMenuViewControllersPlist   @"HWSMenuViewControllers"
+//
+#define kDisplayImage               @"kViewControllerDisplayImage"
+#define kDisplaySelectedImage       @"kViewControllerSelectedImage"
+#define kDisplayName                @"kViewControllerDisplayName"
+#define kStoryboardIdentifier       @"kViewControllerXib"
+#define kMenuSideBarSet             @"kSideBarSet"
 //
 #define kHomeViewController     _arrOfControllersData[0][0]
 #define kMapViewController      _arrOfControllersData[0][1]
