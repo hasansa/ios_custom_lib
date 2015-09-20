@@ -4,9 +4,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IDPoi.h"
+@class NSDictionary;
 
 @interface UserDefaults : NSObject
+
 
 + (UserDefaults *)sharedDefaults;
 - (BOOL)profileMode;
@@ -30,10 +31,10 @@
 - (NSDictionary *)userPersonalPois;
 - (NSDictionary *)userPersonalRecentSearch;
 - (NSArray*)myTripPois;
-- (IDPoi*)myTripNavigationPio;
+- (NSDictionary*)myTripNavigationPio;
 - (NSArray*)myTripArrivedPois;
-- (BOOL)myTripListContainsPoi:(IDPoi*)aPoi;
-- (BOOL)myTripListContainsPoi:(IDPoi*)aPoi withArray:(NSArray*)arr;
+- (BOOL)myTripListContainsPoi:(NSDictionary*)aPoi;
+- (BOOL)myTripListContainsPoi:(NSDictionary*)aPoi withArray:(NSArray*)arr;
 - (BOOL)multiApikeysMode;
 //
 - (BOOL)analyticsMode;
@@ -50,9 +51,9 @@
 - (void)setUserLocationsMode:(BOOL)mode;
 
 - (void)updateMyTripPoisWithdArray:(NSArray*)sortedArr;
-- (void)updateMyTripPoiWithPoi:(IDPoi*)aPoi add:(BOOL)add;
-- (void)updateMyTripArrivedPoisWithPoi:(IDPoi*)aPoi add:(BOOL)add;
-- (void)setMyTripNavigationPoi:(IDPoi*)aPoi;
+- (void)updateMyTripPoiWithPoi:(NSDictionary*)aPoi add:(BOOL)add;
+- (void)updateMyTripArrivedPoisWithPoi:(NSDictionary*)aPoi add:(BOOL)add;
+- (void)setMyTripNavigationPoi:(NSDictionary*)aPoi;
 - (void)setProfileMode:(BOOL)mode;
 - (void)setUserID:(NSString*)userID;
 - (void)setProjectID:(NSString*)projectID;

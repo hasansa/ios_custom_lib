@@ -4,12 +4,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "IDPoi.h"
-#import "IDLocation.h"
 
 @interface DetailsViewController : UIViewController 
 
-@property (nonatomic , weak) IDPoi* currentPoi;
+@property (nonatomic , weak) NSDictionary* currentPoi;
 @property (assign) BOOL  editIsEnabled;
 
 @end

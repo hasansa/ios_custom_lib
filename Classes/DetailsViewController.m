@@ -43,21 +43,21 @@
 
 @implementation DetailsViewController
 
-- (void)setCurrentPoi:(IDPoi *)currentPoi
+- (void)setCurrentPoi:(NSDictionary *)currentPoi
 {
     _currentPoi = currentPoi;
     
     // generate phone URL if EXIST
     NSMutableArray* tmpArr = [NSMutableArray array];
-    [tmpArr addObjectsFromArray :[self.currentPoi.info[kStation] componentsSeparatedByString:@","]];
-    [tmpArr addObjectsFromArray :[self.currentPoi.info[kNurse] componentsSeparatedByString:@","]];
+    [tmpArr addObjectsFromArray :[self.currentPoi[@"info"][kStation] componentsSeparatedByString:@","]];
+    [tmpArr addObjectsFromArray :[self.currentPoi[@"info"][kNurse] componentsSeparatedByString:@","]];
 
     phoneURL = [NSString stringWithFormat:@"tel://%@",
                 [tmpArr firstObject]];
     
     // generate email URL if EXIST
     emailURL = [NSString stringWithFormat:@"mailto:?to=%@",
-                [[self.currentPoi.info[kEmail]  componentsSeparatedByString:@","] firstObject]];
+                [[self.currentPoi[@"info"][kEmail]  componentsSeparatedByString:@","] firstObject]];
     
     
 }
@@ -92,7 +92,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.headerTitle.text = _currentPoi.title;
+    self.headerTitle.text = _currentPoi[@"title"];
     [self.tgFoursquareDetail.tableView reloadData];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     
@@ -148,7 +148,7 @@
     // Create the text Field.
     [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
      {
-         textField.text = _currentPoi.title;
+         textField.text = _currentPoi[@"title"];
          [textField setClearButtonMode:UITextFieldViewModeAlways];
      }];
     
@@ -210,7 +210,7 @@
         if(cell == nil){
             cell = [DetailLocationCell detailLocationCell];
         }
-        [cell displayDataForPoiTitle:_currentPoi.title categories:_currentPoi.categories editMode:_editIsEnabled];
+        [cell displayDataForPoiTitle:_currentPoi[@"title"] categories:_currentPoi[@"categories"] editMode:_editIsEnabled];
         
         cell.delegate = self;
         return cell;
@@ -237,7 +237,7 @@
         }
         
         cell.delegate = self;
-        [cell displayDataForPoiInfo:_currentPoi.info];
+        [cell displayDataForPoiInfo:_currentPoi[@"info"]];
         
         return cell;
     }
@@ -272,7 +272,7 @@
 
 - (void)navigate
 {
-    [self.revealViewController navigateToLocation:self.currentPoi.location];
+    [self.revealViewController navigateToLocation:self.currentPoi[@"location"]];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
@@ -342,11 +342,11 @@
     NSString* poiImgUrl = [NSString stringWithFormat:@"%@res/%@/%@/%@/",
                            BASE_URL,
                            [[UserDefaults sharedDefaults] projectID],
-                           self.currentPoi.location.campusId,
-                           self.currentPoi.location.facilityId];
+                           self.currentPoi[@"location"][@"campusId"],
+                           self.currentPoi[@"location"][@"facilityId"]];
     
     
-    NSArray* galleriesArr = self.currentPoi.info[kGalleries];
+    NSArray* galleriesArr = self.currentPoi[@"info"][kGalleries];
     NSMutableArray* gallariesURLs = [NSMutableArray arrayWithCapacity:galleriesArr.count];
     
     for (int i = 0; i < galleriesArr.count; i++) {
@@ -428,7 +428,9 @@
 {
     NSMutableArray * tmpArr = [NSMutableArray arrayWithArray:_dataArray];
     
-    NSString * poiIdentifier = [NSString stringWithFormat:@"%@.%d.%@", self.currentIdentifier, (int)self.currentPoi.location.floorId, self.currentPoi.identifier];
+    NSString * poiIdentifier = [NSString stringWithFormat:@"%@.%d.%@", self.currentIdentifier,
+                                (int)[self.currentPoi[@"location"][@"floorId"] integerValue],
+                                self.currentPoi[@"identifier"]];
     
     // if already stored
     for (NSDictionary * delDic in _dataArray) {

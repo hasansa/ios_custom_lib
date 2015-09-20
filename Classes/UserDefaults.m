@@ -237,7 +237,7 @@ static UserDefaults * _sharedUserDefaults = nil;
     return _myTripArrivedPoisArray;
 }
 
-- (IDPoi*)myTripNavigationPio
+- (NSDictionary*)myTripNavigationPio
 {
     NSString* poiID = [[NSUserDefaults standardUserDefaults] objectForKey:kUserDefaultsTripNavigationPoiKey];
     if (poiID != nil) {
@@ -266,8 +266,8 @@ static UserDefaults * _sharedUserDefaults = nil;
 {
     NSMutableArray* newArr = [NSMutableArray arrayWithCapacity:sortedArr.count];
     
-    for (IDPoi* poi in sortedArr) {
-            if (poi.identifier != nil) {
+    for (NSDictionary* poi in sortedArr) {
+            if (poi[@"identifier"] != nil) {
                 
                 [newArr addObject:poi];
             }
@@ -276,11 +276,11 @@ static UserDefaults * _sharedUserDefaults = nil;
     _myTripPoisArray = [NSArray arrayWithArray:newArr];
 }
 
-- (void)updateMyTripPoiWithPoi:(IDPoi*)aPoi add:(BOOL)add
+- (void)updateMyTripPoiWithPoi:(NSDictionary*)aPoi add:(BOOL)add
 {
     NSMutableArray* newArr = [NSMutableArray arrayWithArray:_myTripPoisArray];
 
-    if (aPoi.identifier != nil) {
+    if (aPoi[@"identifier"] != nil) {
         
         if (add) {
             if (![self myTripListContainsPoi:aPoi withArray:_myTripPoisArray]) {
@@ -296,11 +296,11 @@ static UserDefaults * _sharedUserDefaults = nil;
     _myTripPoisArray = [NSArray arrayWithArray:newArr];
 }
 
-- (void)updateMyTripArrivedPoisWithPoi:(IDPoi*)aPoi add:(BOOL)add
+- (void)updateMyTripArrivedPoisWithPoi:(NSDictionary*)aPoi add:(BOOL)add
 {
     NSMutableArray* newArr = [NSMutableArray arrayWithArray:_myTripArrivedPoisArray];
     
-    if (aPoi.identifier != nil) {
+    if (aPoi[@"identifier"] != nil) {
         
         if (add) {
             if (![self myTripListContainsPoi:aPoi withArray:_myTripArrivedPoisArray]) {
@@ -316,21 +316,21 @@ static UserDefaults * _sharedUserDefaults = nil;
     _myTripArrivedPoisArray = [NSArray arrayWithArray:newArr];
 }
 
-- (BOOL)myTripListContainsPoi:(IDPoi*)aPoi
+- (BOOL)myTripListContainsPoi:(NSDictionary*)aPoi
 {
     return [self myTripListContainsPoi:aPoi withArray:_myTripArrivedPoisArray];
 }
 
-- (BOOL)myTripListContainsPoi:(IDPoi*)aPoi withArray:(NSArray*)arr
+- (BOOL)myTripListContainsPoi:(NSDictionary*)aPoi withArray:(NSArray*)arr
 {
-    NSArray* filteredArr = [arr filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF.identifier = %@", aPoi.identifier]];
+    NSArray* filteredArr = [arr filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF.identifier = %@", aPoi[@"identifier"]]];
     
     return [filteredArr firstObject] != nil;
 }
 
-- (void)setMyTripNavigationPoi:(IDPoi*)aPoi
+- (void)setMyTripNavigationPoi:(NSDictionary*)aPoi
 {
-    [[NSUserDefaults standardUserDefaults] setObject:aPoi.identifier forKey:kUserDefaultsTripNavigationPoiKey];
+    [[NSUserDefaults standardUserDefaults] setObject:aPoi[@"identifier"] forKey:kUserDefaultsTripNavigationPoiKey];
 }
 
 -(void)setLocationSharingMode:(BOOL)mode
