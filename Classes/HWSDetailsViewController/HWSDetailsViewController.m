@@ -15,6 +15,8 @@
 #import "HWSLocalization.h"
 #import "HWSRevealViewController.h"
 
+#define BASE_URL @"<BASE-URL-HERE>"
+
 @interface HWSDetailsViewController () <UITableViewDataSource,
                                 UITableViewDelegate,
                                 HWSTGFoursquareLocationDetailDelegate,

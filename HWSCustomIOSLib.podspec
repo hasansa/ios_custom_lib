@@ -61,7 +61,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/HasanSawaed/ios_custom_lib.git", :commit => "53677c0adb4272fa10b9f2137e30ac0923c8208e", :tag => "7.1.4" }
+  s.source       = { :git => "https://github.com/HasanSawaed/ios_custom_lib.git", :commit => "c99cbb28346d19336684199adf436c18a45a8e64", :tag => "7.1.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -72,7 +72,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  =  "Classes/*.{h,m}", "Classes/**/*.{h,m}"
+  s.source_files  =  'Classes', 'Classes/*.{h,m}', 'Classes/**/*.{h,m}'
   #s.source_files  =  "**/*.{h,m}"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -83,7 +83,7 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resource = "Resources/*.{xib}", "Resources/*.{plist}", "Resources/*.{json}"
+  s.resource = 'Resources/*.{xib}', 'Resources/*.{plist}', 'Resources/*.{json}'
   #s.resource = "**/*.{xib}", "**/*.{plist}", "**/*.{json}"
 
 
