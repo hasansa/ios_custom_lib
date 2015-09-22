@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "HWSCustomIOSLib"
-  s.version      = "7.1.5"
+  s.version      = "7.1.6"
   s.summary      = "A Common Custom UI Controls, Common Custom Models of HWSCustomIOSLib"
 
   s.description  = <<-DESC
@@ -61,7 +61,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/HasanSawaed/ios_custom_lib.git", :commit => "c99cbb28346d19336684199adf436c18a45a8e64", :tag => "7.1.5" }
+  s.source       = { :git => "https://github.com/HasanSawaed/ios_custom_lib.git", :commit => "43107b2cd49a7580447fc91edee1f55c6ec86d3b", :tag => "7.1.6" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -72,8 +72,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  =  'Classes', 'Classes/*.{h,m}', 'Classes/**/*.{h,m}'
-  #s.source_files  =  "**/*.{h,m}"
+  s.source_files  =  'Classes/**', 'Classes/**/*.{h,m}'
+  # s.source_files  =  "**/*.{h,m}"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

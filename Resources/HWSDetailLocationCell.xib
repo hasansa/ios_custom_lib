@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailLocationCell" rowHeight="138" id="gBY-mA-WHD" customClass="DetailLocationCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailLocationCell" rowHeight="138" id="gBY-mA-WHD" customClass="HWSDetailLocationCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gBY-mA-WHD" id="vbE-aw-wZI">
@@ -71,7 +71,7 @@
                 <outlet property="btnNavigate" destination="zyH-ON-tqz" id="xU5-be-vXj"/>
                 <outlet property="btnSave" destination="spO-57-9L7" id="EbU-oZ-UsT"/>
                 <outlet property="btnShowOnMap" destination="0zR-Qn-HNV" id="AbX-gi-dS5"/>
-                <outlet property="imgView" destination="kkf-0T-oc5" id="iJQ-ms-Lpi"/>
+                <outlet property="imgView" destination="kkf-0T-oc5" id="Nz4-6A-HMt"/>
                 <outlet property="lblCategories" destination="S3i-kT-Tg4" id="wNT-j7-IUu"/>
                 <outlet property="lblTitle" destination="AcE-Ii-fub" id="sPo-0b-tDG"/>
                 <outlet property="viewRate" destination="xBE-uR-RLm" id="I1X-uJ-6L4"/>
@@ -80,11 +80,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="info-icon" width="32" height="32"/>
+        <image name="info-icon" width="42" height="42"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
